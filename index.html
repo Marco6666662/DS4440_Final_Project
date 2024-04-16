@@ -1,54 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>DS4440 Final Project</title>
-    <meta property="og:title" content="Soccer Fouls Detection Based on CNN and Spatial Attention" />
-    <meta name="twitter:title" content="Soccer Fouls Detection Based on CNN and Spatial Attention" />
-    <meta name="description" content="This project explores the application of CNN for detecting soccer fouls using video frames, building upon existing research to improve accuracy and reduce complexity." />
-    <meta property="og:description" content="This project explores the application of CNN for detecting soccer fouls using video frames, building upon existing research to improve accuracy and reduce complexity." />
-    <meta name="twitter:description" content="This project explores the application of CNN for detecting soccer fouls using video frames, building upon existing research to improve accuracy and reduce complexity." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap for mobile-friendly layout -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+<title>Your Project Name</title>
+<meta property="og:title" content=Your Project Name" />
+<meta name="twitter:title" content="Your Project Name" />
+<meta name="description" content="Your project about your cool topic described right here." />
+<meta property="og:description" content="Your project about your cool topic described right here." />
+<meta name="twitter:description" content="Your project about your cool topic described right here." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- bootstrap for mobile-friendly layout -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="nd-docs">
+<div class="nd-pageheader">
+ <div class="container">
+ <h1 class="lead">
+ <nobr class="widenobr">Your Project Name</nobr>
+ <nobr class="widenobr">For CS 7150</nobr>
+ </h1>
+ </div>
+</div><!-- end nd-pageheader -->
+
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="text-center my-4">Soccer Fouls Detection Based on CNN and Spatial Attention</h1>
-            <h2>Introduction</h2>
-            <p>In recent years, the field of sports video analysis has seen significant advancements, particularly with the integration of deep learning techniques to automate the detection of specific events within game footage. This project builds on the "Automatic Soccer Video Event Detection Based on a Deep Neural Network Combined CNN and RNN" to explore the effectiveness of CNN in distinguishing between foul and no-foul scenarios in soccer matches using video frames.</p>
-            <h2>Review of the Source Paper</h2>
-            <p>The paper introduces a novel approach to soccer video analysis using a hybrid model of CNN and RNN, aiming to detect events like goals and cards. For our project, we focus on adapting the CNN component to detect fouls, a less time-sensitive event compared to others mentioned in the paper, thereby simplifying the model by removing the RNN component.</p>
-            <h2>Technical Structure of Our Method</h2>
-            <p>Our model consists of five convolution layers and two fully-connected layers, with a 2-way softmax classifier to distinguish between 'foul' and 'no-foul'. The model uses max pooling and ReLU activation. A spatial attention layer is added to focus on relevant features within the frame.</p>
-            <h2>Experimental Findings</h2>
-            <p>Experiments show our model outperforms basic CNN models by incorporating spatial attention, which significantly improves the accuracy of foul detection in diverse game scenarios.</p>
-            <h2>Conclusion</h2>
-            <p>This project demonstrates the potential of CNNs enhanced with spatial attention for detecting complex events like soccer fouls, providing insights that could benefit real-time sports analytics and referee training programs.</p>
-            <h3>References</h3>
-            <ul>
-                <li>Jiang, H., Lu, Y., & Xue, J. (2016). Automatic Soccer Video Event Detection Based on a Deep Neural Network Combined CNN and RNN. 2016 IEEE 28th International Conference on Tools with Artificial Intelligence (ICTAI). IEEE. <a href="https://ieeexplore.ieee.org/document/7814641">Access Here</a></li>
-            </ul>
-            <h3>Team Members</h3>
-            <p>Xi Chen, Qixiang Jiang</p>
-        </div>
-    </div>
+<div class="row">
+<div class="col justify-content-center text-center">
+<h2>An Analysis of [papername]</h2>
+<p>Describe the paper and the big question about it that interests you.</p>
 </div>
-<script>
-    $(document).on('click', '.clickselect', function(ev) {
-        var range = document.createRange();
-        range.selectNodeContents(this);
-        var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-    });
-</script>
+</div>
+<div class="row">
+<div class="col">
+
+<h2>Literature Review; Biography; Social Impact; Industry Applications; Follow-on Research; and Peer-Review</h2>
+
+<p>Just as we have done in the role-playing exercise, analyze the paper from all perspectives.
+</p>
+
+<p>Optionally, in addition to a reading-based analysis, implement the ideas of the paper in code, and report on your findings.
+</p>
+
+<h3>References</h3>
+
+<p><a name="bottou-1990">[1]</a> <a href="https://papers.baulab.info/Bottou-1990.pdf"
+  >L&eacute;on Bottou and Patrick Gallinari.
+  <em>A framework for the cooperation of learning algorithms.</em></a>
+  Advances in neural information processing systems 3 (1990).
+</p>
+
+<h2>Team Members</h2>
+                                                   
+<p>Make sure to list here is who is on the team.</p>
+
+  
+</div><!--col-->
+</div><!--row -->
+</div> <!-- container -->
+
+<footer class="nd-pagefooter">
+  <div class="row">
+    <div class="col-6 col-md text-center">
+      <a href="https://cs7150.baulab.info/">About CS 7150</a>
+    </div>
+  </div>
+</footer>
+
 </body>
+<script>
+$(document).on('click', '.clickselect', function(ev) {
+  var range = document.createRange();
+  range.selectNodeContents(this);
+  var sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+});
+// Google analytics below.
+window.dataLayer = window.dataLayer || [];
+</script>
 </html>
