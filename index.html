@@ -62,9 +62,15 @@
                     <li>Training the new model(s) on this dataset to learn and predict these two categories effectively.</li>
                 </ul>
                 <h3>Report of Findings</h2>
-                <p>content</p>
+                <p>We employed stochastic gradient descent (SGD) as our optimizer, with a learning rate of 0.001 and a momentum of 0.9, and selected CrossEntropy as our loss function. 
+                    This configuration aligns with the setup described in the referenced paper. The sole deviation from the paper's methodology lies in the duration of the training period: 
+                    while the paper extends the training to 300 epochs, we limited ours to 50 epochs to mitigate the risk of overfitting. The images below depict the performance of both the 
+                    normal and attention models on the train/test datasets. We observed that the normal(standard) model achieved a 97% accuracy on the training dataset and 83% on the test 
+                    dataset. In comparison, the attention model recorded 93% accuracy on the training set and 80% on the test set, indicating that the normal model outperforms the attention 
+                    model on both datasets. This observation leads us to our initial hypothesis: incorporating a spatial attention layer may potentially degrade the model's performance.
+                </p>
                 <div class="text-center">
-                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240421145214.png?raw=true" alt="Model Structure Comparison" class="img-fluid">
+                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713755768033.jpg?raw=true" alt="Model Performance" class="img-fluid">
                 </div>
                 <p>To assess our model's robustness with data not included in our primary train/test sets, we procured three recent or characteristic soccer foul videos from YouTube. 
                     The first video showcases an incident involving Pepe during a match between Real Madrid and Barcelona in the 2011-2012 season. In the footage, Pepe attempts an aerial 
@@ -78,13 +84,17 @@
                      the attention model's capability to target more pertinent regions of the image, thereby enhancing its predictive accuracy in complex scenarios.
                 </p>
                 <div class="text-center">
-                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240421145824.png?raw=true" alt="Result Comparison On Pepe's foul" class="img-fluid">
+                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713754995081.jpg?raw=true" alt="Result Comparison On Pepe's foul" class="img-fluid">
                 </div>
                 <p>
                     The second video dates back to last December during a World Cup qualifier in Buenos Aires, where Argentina faced Uruguay. At the 20-minute mark, a tense verbal exchange erupted
                     between Uruguay's defender Mathias Olivera and Argentina's midfielder Rodrigo De Paul. Initially confined to verbal sparring, the situation escalated when Argentina's captain, 
                     Lionel Messi, intervened, turning the altercation physical. Messi initiated contact by thrusting his right elbow into Olivera's chest, followed by a brief encirclement of the 
-                    Uruguayan's neck with his left hand. 
+                    Uruguayan's neck with his left hand. This video was also processed by our models, yielding consistent results: the normal model identified no foul, while the attention model 
+                    detected a foul. Drawing from insights gained in the first example, an examination of the gradient maps reveals significant differences in focus areas. The normal model primarily 
+                    concentrates on less relevant elements such as the players' hair and the grass in the background. In contrast, the attention model zeroes in on more critical interactions, specifically 
+                    Olivera's upper body, and accurately captures Messi's hand around Olivera's neck. This instance further demonstrates the attention model's superior capability to discern pivotal components 
+                    of the image, thereby providing a more explanatory and relevant analysis.
                 </p>
                 <div class="text-center">
                     <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713753268440.jpg?raw=true" alt="Model Structure Comparison" class="img-fluid">
