@@ -124,7 +124,7 @@
                 <div class="text-center">
                     <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713755768033.jpg?raw=true" alt="Model Performance" class="img-fluid" style="width: 600px; height: 400px;">
                 </div>
-                <p>To assess our model's robustness with data not included in our primary train/test sets, we procured three recent or characteristic soccer foul videos from YouTube. 
+                <p>To assess our model's robustness with data not included in our primary train/test sets, we procured two recent or characteristic soccer foul videos from YouTube. 
                     The first video showcases an incident involving Pepe during a match between Real Madrid and Barcelona in the 2011-2012 season. In the footage, Pepe attempts an aerial 
                     challenge against Dani Alves, but his right foot collides with Alves' left knee, causing Alves to collapse to the pitch in evident agony. The referee immediately issued
                     Pepe a red card, signifying his expulsion from the match. We fed the videos into our model and subsequently selected one of the most illustrative frames. Displayed below
@@ -160,11 +160,21 @@
                     </li>
                     <li>
                         <h3>Data Diversity</h3>
-                        <p>Expanding the dataset size was a step forward, yet an oversight in ensuring equitable distribution of multi-view data (e.g. image captured from different angle) points highlights the importance of diversity in training datasets.</p>
+                        <p>We observed that both the normal and attention models were prone to misclassifying images of players standing or walking on grass as fouls. Upon inspecting our dataset, we identified a significant deficiency in the variety of images, notably a lack of close-range shots 
+                            of players simply standing on the grass. This lack likely contributed to the models' misclassification errors. Additionally, the expansion of our dataset with videos collected from YouTube helped reduce occurrences of such situations. We also noted a data imbalance during the 
+                            collection process: the ratio of 'foul' to 'no foul' images was 1:2.5. Although collecting images of fouls is more time-consuming, this highlights the importance of ensuring a balanced distribution of images, particularly those captured from multiple viewpoints. Such diversity 
+                            is crucial for training robust models.
+
+                        </p>
                     </li>
                     <li>
                         <h3>Contextual Analysis</h3>
-                        <p>Predicting frames in isolation may introduce bias. To mitigate this, we consider the integration of contextual sequences (e.g., live action, replays) for more accurate and reliable predictions, drawing inspiration from methodologies that assess combinations of actions within a game.</p>
+                        <p>Predicting frames in isolation may introduce bias, as illustrated by the incident involving Pepe's alleged foul. Video analysis reveals that Alves's knee was not kicked by Pepe; 
+                            instead, Alves's convincing reaction deceived both the referee and our attention model. 
+                            This exemplifies the pitfalls of lacking contextual information, which prevents accurate classification of the event type. 
+                            To mitigate this, we consider the integration of contextual sequences (e.g., live action, replays) for more accurate and reliable predictions, 
+                            drawing inspiration from methodologies that assess combinations of actions within a game. 
+                        </p>
                     </li>
                 </ul>
             </div>
