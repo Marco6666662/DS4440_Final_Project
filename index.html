@@ -70,14 +70,14 @@
                 </p>
                 <div class="container2">
                     <div class="image-box">
-                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/paper_model.jpg?raw=true" alt="Image 1">
+                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/paper_model.png?raw=true" alt="Image 1">
                       <h5> Paper's CNN Model</h5>
                       <p> Consists of five convolutional layers,  two fully connected layer and the last output layer that is a 9 way softmax classifier</p>
                     </div>
                     <div class="image-box">
                       <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/normal_model.jpg?raw=true" alt="Image 2">
                       <h5> Our Normal Model</h5>
-                      <p> Everything same as the paper’s model instead the output layer now is 2 way softmax classifier (foul or no foul)</p>
+                      <p> Everything same as the paper's model instead the output layer now is 2 way softmax classifier (foul or no foul)</p>
                     </div>
                     <div class="image-box">
                       <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/attention_model.jpg?raw=true" alt="Image 3">
@@ -87,23 +87,30 @@
                   </div>
                 <h3>Data Collection</h2>
                 <p> 
-                    add here
+                    Due to the lack of available datasets and limited online resources, we opted for a hybrid data collection method, combining 
+                    datasets downloaded from Kaggle with data manually collected from YouTube. From Kaggle, we acquired the 'Tackle Dataset,' 
+                    which comprises 1,200 images of soccer tackles. Initially, we trained our model using this dataset; however, it overfitted 
+                    significantly, achieving a maximum accuracy of only 70% on the test set. To enhance our dataset, we turned to YouTube for 
+                    additional images. We searched terms such as 'foul moment' and 'red cards moment,' taking screenshots at the moment of contact 
+                    between players to gather data for foul instances. For non-foul data, we utilized UEFA's weekly highlight videos, extracting frames 
+                    that would augment our non-foul dataset. We carefully reviewed these highlights in full to ensure that they did not contain any fouls. 
+                    Ultimately, this approach expanded our final dataset to over 3,500 images.
                 </p>
                 <div class="container2">
                     <div class="image-box">
-                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/image(6).jpg?raw=true" alt="Image 1">
+                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/image (6).png?raw=true" alt="Image 1">
                       <h5> Tackle Dataset</h5>
                       <p> Contains ~600 clean tackles and ~600 fouls image data</p>
                     </div>
                     <div class="image-box">
-                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/image(5).jpg?raw=true" alt="Image 2">
+                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/image (5).png?raw=true" alt="Image 2">
                       <h5> Youtube Soccer Foul Video</h5>
-                      <p> In order to increase fouls data, we search “fouls moment” on youtube and take screenshot when they foul. (~200 data)</p>
+                      <p> ~400 data</p>
                     </div>
                     <div class="image-box">
-                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/image(2).jpg?raw=true" alt="Image 3">
+                      <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/image (2).png?raw=true" alt="Image 3">
                       <h5> UEFA Weekly Highlights</h5>
-                      <p> UEFA (Union of European Football Associations) uploads highlights every week, which are high quality data for no foul data. (~2000+ data)</p>
+                      <p> ~2500+ data</p>
                     </div>
                   </div>
                 <h3>Report of Findings</h2>
@@ -115,7 +122,7 @@
                     model on both datasets. This observation leads us to our initial hypothesis: incorporating a spatial attention layer may potentially degrade the model's performance.
                 </p>
                 <div class="text-center">
-                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713755768033.jpg?raw=true" alt="Model Performance" class="img-fluid">
+                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713755768033.jpg?raw=true" alt="Model Performance" class="img-fluid" style="width: 600px; height: 400px;">
                 </div>
                 <p>To assess our model's robustness with data not included in our primary train/test sets, we procured three recent or characteristic soccer foul videos from YouTube. 
                     The first video showcases an incident involving Pepe during a match between Real Madrid and Barcelona in the 2011-2012 season. In the footage, Pepe attempts an aerial 
@@ -129,7 +136,7 @@
                      the attention model's capability to target more pertinent regions of the image, thereby enhancing its predictive accuracy in complex scenarios.
                 </p>
                 <div class="text-center">
-                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713754995081.jpg?raw=true" alt="Result Comparison On Pepe's foul" class="img-fluid">
+                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713754995081.jpg?raw=true" alt="Result Comparison On Pepe's foul" class="img-fluid" style="width: 1000px; height: 300px;">
                 </div>
                 <p>
                     The second video dates back to last December during a World Cup qualifier in Buenos Aires, where Argentina faced Uruguay. At the 20-minute mark, a tense verbal exchange erupted
@@ -142,7 +149,7 @@
                     of the image, thereby providing a more explanatory and relevant analysis.
                 </p>
                 <div class="text-center">
-                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713753268440.jpg?raw=true" alt="Model Structure Comparison" class="img-fluid">
+                    <img src="https://github.com/Marco6666662/DS4440_Final_Project/blob/main/1713753268440.jpg?raw=true" alt="Model Structure Comparison" class="img-fluid" style="width: 1000px; height: 300px;">
                 </div>
                 <h3>Conclusion & Future Work</h2>
                 <p>As we look toward the future, several areas have emerged as key focal points for ongoing research and development:</p>
