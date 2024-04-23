@@ -61,7 +61,8 @@
                     which unfolds over a comparatively protracted duration and distinct spatial phases.
                 </p>
                 <p><strong>Needs more data:</strong> The paper only uses 16 samples for Card class. It is not convincing with such a data size. We should find a much larger data set to test the performance of CNN.</p>
-                <p><strong>Add new technique to model:</strong> We could add layers to the model to boost robustness. For instance, we could add a spatial attention layer after the last convolutional layer to ensure our model focusing on more important areas of the input. In addition, we need to use GradCam (Gradient-weighted Class Activation Mapping) to see where the model is looking at.</p>
+                <p><strong>Add new technique to model:</strong> We could add layers to the model to boost robustness. For instance, we could add a spatial attention layer after the last convolutional layer to ensure our model focusing on more important areas of the input,
+                     where the spatial attention layer typically consists of a Conv2D layer followed by a sigmoid activation function to generate a spatial attention map that modulates input features. In addition, we need to use GradCam (Gradient-weighted Class Activation Mapping) to see where the model is looking at.</p>
                 <p> 
                     Consequently, our project will advance by training and testing two models with an expanded dataset to ensure a comprehensive analysis. The first is the normal model, 
                     which omits the use of RNN as per our revised approach and modifies the CNN output layer from the one described in the paper. The second, named the attention model, 
